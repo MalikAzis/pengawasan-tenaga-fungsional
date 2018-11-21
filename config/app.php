@@ -13,7 +13,56 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Fungsional'),
+
+    'main-color' => 'bg-linkedin',
+
+    'sidebar' => [
+        'ipkps' => [
+            'label' => 'IPKPS',
+            'icon'  => 'icon-badge',
+            'url'   => '#',
+            'submenu'   => [
+                'unggahIpkps' => [
+                    'label' => 'Unggah IPKPS',
+                    'icon'  => 'icon-cloud-upload',
+                    'url'   => 'index',
+                ],
+                'penilaianIpkps' => [
+                    'label' => 'Penilaian IPKPS',
+                    'icon'  => 'icon-badge',
+                    'url'   => 'index'
+                ],
+                'rekap' => [
+                    'label' => 'Rekap',
+                    'icon'  => 'icon-docs',
+                    'url'   => 'index'
+                ],
+            ],
+        ],
+        'dataMaster' => [
+            'label' => 'Data Master',
+            'icon'  => 'icon-shield',
+            'url'   => '#',
+            'submenu'   => [
+                'pengguna' => [
+                    'label' => 'Manajemen User',
+                    'icon'  => 'fa fa-user-circle fa-fw',
+                    'url'   => '#',
+                    'submenu'   => [
+                        'admin' => [
+                            'label' => 'User',
+                            'url'   => 'manajemen_user',
+                        ],
+                        'pegawai' => [
+                            'label' => 'Atur Hak Akses',
+                            'url'   => 'atur_hak_akses'
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------

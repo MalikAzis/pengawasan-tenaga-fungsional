@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 
 class RekapController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('checkUser');
+    }
+
     /**
      * Display a listing of the resource.
      *
